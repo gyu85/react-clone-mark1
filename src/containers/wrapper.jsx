@@ -7,7 +7,7 @@ const Wrapper = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' exact elemet={<MainContainer />} />
+        <Route path='/' exact element={<MainContainer />} />
 
         <Route path='*' element={<Navigate to={'/'} />} />
       </Routes>
