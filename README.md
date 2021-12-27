@@ -10,8 +10,16 @@ https://ceo.baemin.com/
 ### 참고한 디자인 시스템
 스포카 - https://bi.spoqa.com/
 
+### 참고 개발 페이지
+CAR - https://create-react-app.dev/
+
 ### 페이지 디테일
 main
+
+### 화면 breaking points
+기준 구글 개발자 도구
+tablet: 768px 이하
+mobile : 425px 이하
 
 ## 작업 규칙
 ### 브랜치 규칙
@@ -23,3 +31,35 @@ header/YYMMDD/namimg
 
 ### Commit 규칙
 - 작업 후 커밋 : "[YYMMDD] - 내용"
+
+## Code conventions
+
+### style-components
+미디어 쿼리 적용
+미디어 쿼리 적용 될 때 props를 받는 형식으로 진행
+```javascript
+const Title1 = styled.h1(props => ({
+  color: 'red',
+  [props.tablet]: {
+    color: 'pink'
+  },
+  [props.mobile]: {
+    color: 'violet'
+  }
+}));
+
+const Main = () => {
+  const {
+    mq: { tablet, mobile }
+  } = useThemeState();
+
+  return (
+    <Fragment>
+      <Title1 tablet={tablet} mobile={mobile}>
+        Main
+      </Title1>
+    </Fragment>
+  );
+};
+
+```
