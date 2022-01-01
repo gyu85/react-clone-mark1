@@ -37,6 +37,7 @@ header/YYMMDD/namimg
 ### style-components
 미디어 쿼리 적용
 미디어 쿼리 적용 될 때 props를 받는 형식으로 진행
+
 ```javascript
 const Title1 = styled.h1(props => ({
   color: 'red',
@@ -62,4 +63,32 @@ const Main = () => {
   );
 };
 
+```
+
+#### heading tag 정의
+heading 은 title로 정의
+
+h1
+``` javascript
+const Title1 = styled.h1``
+```
+
+h2
+``` javascript
+const Title2 = styled.h2``
+```
+
+h3
+``` javascript
+const Title3 = styled.h3``
+```
+
+h4
+``` javascript
+const Title4 = styled.h4``
+```
+
+h5
+``` javascript
+const Title4 = styled.strong``
 ```
