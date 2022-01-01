@@ -20,6 +20,8 @@ const getInitTheme = () => {
 
       white: '#FFF',
 
+      yellow: '#ffcf00',
+
       illustLine: '#495666',
 
       green: '#35d48d',
@@ -28,7 +30,9 @@ const getInitTheme = () => {
 
       red: '#ff5d5d',
       redLight: '#ff8e89',
-      redDark: '#f24147'
+      redDark: '#f24147',
+
+      violet: '#764abc'
     },
     mq: {
       tablet: '@media screen and (max-width:768px)',

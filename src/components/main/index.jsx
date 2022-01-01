@@ -1,28 +1,17 @@
 import React, { Fragment } from 'react';
 
-import styled from 'styled-components';
-import { useThemeState } from 'context/theme';
-
-const Title1 = styled.h1(props => ({
-  color: 'red',
-  [props.tablet]: {
-    color: 'pink'
-  },
-  [props.mobile]: {
-    color: 'violet'
-  }
-}));
+import Tnb from '../common/layouts/tnb';
+import Header from '../common/layouts/header';
+import Contents from '../common/layouts/contents';
+import Footer from '../common/layouts/footer';
 
 const Main = () => {
-  const {
-    mq: { tablet, mobile }
-  } = useThemeState();
-
   return (
     <Fragment>
-      <Title1 tablet={tablet} mobile={mobile}>
-        Main
-      </Title1>
+      <Tnb />
+      <Header />
+      <Contents />
+      <Footer />
     </Fragment>
   );
 };

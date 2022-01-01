@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
   input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox}
   button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
   input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none}
+
+  html,
+  body,
+  #root {height:100%}
 `;
 
 export default GlobalStyle;
