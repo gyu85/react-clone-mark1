@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import Tnb from '../common/layouts/tnb';
-import Header from '../common/layouts/header';
+import Header from '../common/layouts/header/header';
 import Contents from '../common/layouts/contents';
 import Footer from '../common/layouts/footer';
 
