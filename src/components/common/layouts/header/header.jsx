@@ -9,12 +9,16 @@ import Gnb from './gnb';
 import SUbGnb from './subGnb';
 
 const HeaderEl = styled.header(props => ({
-  maxWidth: '1100px',
-  padding: '0 32px',
-  margin: '0 auto',
-  boxSizing: 'border-box',
-  alignItems: 'center'
+  borderBottom: `1px solid ${props.colors.gray03}`
 }));
+
+const HeaderInner = styled.div`
+  max-width: 1100px;
+  padding: 0 32px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  align-items: center;
+`;
 
 const GnbWrapper = styled.div`
   display: flex;
@@ -40,20 +44,22 @@ const Header = () => {
   const { colors } = useThemeState();
   return (
     <HeaderEl colors={colors}>
-      <SUbGnb />
-      <GnbWrapper>
-        <Logo>
-          <LinkLogo href={getPathHome()}>
-            <ImgLogo
-              src='https://placehold.co/186x32/424242/fff?text=LOGO'
-              width='186'
-              height='32'
-              alt='클론로고'
-            />
-          </LinkLogo>
-        </Logo>
-        <Gnb />
-      </GnbWrapper>
+      <HeaderInner>
+        <SUbGnb />
+        <GnbWrapper>
+          <Logo>
+            <LinkLogo href={getPathHome()}>
+              <ImgLogo
+                src='https://placehold.co/186x32/424242/fff?text=CLONE LOGO'
+                width='186'
+                height='32'
+                alt='클론로고'
+              />
+            </LinkLogo>
+          </Logo>
+          <Gnb />
+        </GnbWrapper>
+      </HeaderInner>
     </HeaderEl>
   );
 };
