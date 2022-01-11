@@ -20,6 +20,8 @@ const GlobalStyle = createGlobalStyle`
   html,
   body,
   #root {height:100%}
+
+  .screen-out {overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
 `;
 
 export default GlobalStyle;
