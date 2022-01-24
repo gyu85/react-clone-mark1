@@ -101,7 +101,9 @@ const BannerText = styled.p(props => ({
   color: `${props.bannerTextColor}`
 }));
 
-const Carousel = ({ content }) => {
+const Carousel = props => {
+  const { content, loop } = props;
+
   return (
     <StyledSwiper
       modules={[Pagination, Navigation]}
@@ -110,9 +112,7 @@ const Carousel = ({ content }) => {
         prevEl: '.btn-prev'
       }}
       pagination={{ type: 'fraction' }}
-      loop={true}
-      onSwiper={swiper => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      loop={loop}
       className='mySwiper'
     >
       <NavigationCustomButton type='button' className='btn-prev'>

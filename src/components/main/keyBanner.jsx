@@ -50,7 +50,7 @@ const sliderContentData = {
 const KeyVisual = () => {
   const { content } = sliderContentData;
 
-  return <Carousel content={content} />;
+  return <Carousel content={content} loop={true} />;
 };
 
 export default KeyVisual;
